@@ -1,3 +1,5 @@
+#Requires -RunAsAdministrator
+
 $registryKey = "HKLM:\SOFTWARE\R-core\R"
 $installPath = (Get-ItemProperty $registryKey -Name "InstallPath").InstallPath
 $exePath = (Join-Path $installPath "bin\x64\Rterm.exe").Replace("\", "\\")
